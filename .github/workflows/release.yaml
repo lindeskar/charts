@@ -15,14 +15,12 @@ jobs:
       contents: write
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout main branch
+      - name: Checkout
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
-          path: main
 
       - name: Configure Git
-        working-directory: main
         run: |
           git config user.name "$GITHUB_ACTOR"
           git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
@@ -36,7 +34,7 @@ jobs:
           CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
           CR_RELEASE_NAME_TEMPLATE: "helm-{{ .Version }}"
         with:
-          charts_dir: main/charts
+          charts_dir: charts
 
       - name: Find packaged charts
         shell: bash
@@ -44,7 +42,7 @@ jobs:
           env | grep GITHUB
           pwd
           find .cr-release-packages -type f -name '*.tgz'
-          for chart in .cr-release-packages/* ; do
+          for chart in .cr-release-packages/*.tgz ; do
               echo "$chart"
           done
 
