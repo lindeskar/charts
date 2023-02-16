@@ -15,20 +15,14 @@ jobs:
       contents: write
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout main branch
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
-          path: "src"
-
-      - name: Checkout
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-          path: "dest"
-          ref: "gh-pages"
+          path: main
 
       - name: Configure Git
+        working-directory: main
         run: |
           git config user.name "$GITHUB_ACTOR"
           git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
@@ -42,7 +36,7 @@ jobs:
           CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
           CR_RELEASE_NAME_TEMPLATE: "helm-{{ .Version }}"
         with:
-          charts_dir: src/charts
+          charts_dir: main/charts
 
       - name: Find packaged charts
         shell: bash
@@ -53,3 +47,16 @@ jobs:
           for chart in .cr-release-packages/* ; do
               echo "$chart"
           done
+
+      - name: Checkout gh-pages branch
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          path: gh-pages
+          ref: gh-pages
+
+      - name: Configure Git
+        working-directory: gh-pages
+        run: |
+          git config user.name "$GITHUB_ACTOR"
+          git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
