@@ -3,6 +3,16 @@ entries:
   test:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2023-02-16T22:35:46.985550943Z"
+    description: A Helm chart for Kubernetes
+    digest: ae0f6d0ebc0dd5c4ab56a34dba339ac05c778018ec7943a01cf680d3dec3c8d6
+    name: test
+    type: application
+    urls:
+    - https://github.com/lindeskar/charts/releases/download/helm-0.1.6/test-0.1.6.tgz
+    version: 0.1.6
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2023-02-16T22:21:29.070338738Z"
     description: A Helm chart for Kubernetes
     digest: 8c2fe77c33b39917decf0342ff2692b2e5125e2287007867e8109e1fe4a791cc
@@ -31,4 +41,4 @@ entries:
     urls:
     - https://github.com/lindeskar/charts/releases/download/test-0.1.0/test-0.1.0.tgz
     version: 0.1.0
-generated: "2023-02-16T22:21:29.070351138Z"
+generated: "2023-02-16T22:35:46.985566743Z"
