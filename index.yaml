@@ -3,17 +3,17 @@ entries:
   test:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-02-17T09:16:24.009665104Z"
+    created: "2023-02-17T09:16:25.618850424Z"
     description: A Helm chart for Kubernetes
     digest: 834c15ffc656c0fa8f2144b47fef11646f2615f82a881ea36c25750d39cd650f
     name: test
     type: application
     urls:
-    - https://github.com/lindeskar/charts/releases/download/helm-test-0.1.8/test-0.1.8.tgz
+    - https://raw.githubusercontent.com/lindeskar/charts/gh-pages/test-0.1.8.tgz
     version: 0.1.8
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-02-16T22:47:05.445640554Z"
+    created: "2023-02-17T09:16:25.618414618Z"
     description: A Helm chart for Kubernetes
     digest: 4299b30d29e97e58309e24d21c16f765dc071741dee8fe5c4e326cf04f705ffe
     name: test
@@ -23,7 +23,7 @@ entries:
     version: 0.1.7
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-02-16T22:47:05.444902738Z"
+    created: "2023-02-17T09:16:25.617956511Z"
     description: A Helm chart for Kubernetes
     digest: ae0f6d0ebc0dd5c4ab56a34dba339ac05c778018ec7943a01cf680d3dec3c8d6
     name: test
@@ -34,12 +34,12 @@ entries:
   test2:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-02-17T09:16:24.144393707Z"
+    created: "2023-02-17T09:16:25.619301031Z"
     description: A Helm chart for Kubernetes
     digest: 92e1c3e7e012afedb01b71fcf0f8d11388df1c50da610c244f2f47282b80aa7d
     name: test2
     type: application
     urls:
-    - https://github.com/lindeskar/charts/releases/download/helm-test2-0.1.0/test2-0.1.0.tgz
+    - https://raw.githubusercontent.com/lindeskar/charts/gh-pages/test2-0.1.0.tgz
     version: 0.1.0
-generated: "2023-02-17T09:16:24.144406307Z"
+generated: "2023-02-17T09:16:25.617339602Z"
