@@ -1,3 +1,4 @@
+---
 service:
   type: ClusterIP
-  port: 82
+  port: 81
